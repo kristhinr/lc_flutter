@@ -79,19 +79,19 @@ Flutter的iOS风格聊天程序
 
 # Preview
 
-[login]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/login.png)
+![login](https://github.com/kristhinr/lc_flutter/tree/main/preview/login.png)
 
-[nav]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/nav.png)
-[known]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/known.png)
-[star]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/star.png)
-[star_decode]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/star_decode.png)
-[group]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/group.png)
-[message_decode]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/message_decode.png)
-[message_encode]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/message_encode.png)
+![nav](https://github.com/kristhinr/lc_flutter/tree/main/preview/nav.png)
+![known](https://github.com/kristhinr/lc_flutter/tree/main/preview/known.png)
+![star](https://github.com/kristhinr/lc_flutter/tree/main/preview/star.png)
+![star_decode](https://github.com/kristhinr/lc_flutter/tree/main/preview/star_decode.png)
+![group](https://github.com/kristhinr/lc_flutter/tree/main/preview/group.png)
+![message_decode](https://github.com/kristhinr/lc_flutter/tree/main/preview/message_decode.png)
+![message_encode](https://github.com/kristhinr/lc_flutter/tree/main/preview/message_encode.png)
 
-[nav2]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/nav2.png)
-[func]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/func.png)
+![nav2](https://github.com/kristhinr/lc_flutter/tree/main/preview/nav2.png)
+![func](https://github.com/kristhinr/lc_flutter/tree/main/preview/func.png)
 
-[send]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/send.png)
-[send2]!(https://github.com/kristhinr/lc_flutter/tree/main/preview/send2.png)
+![send](https://github.com/kristhinr/lc_flutter/tree/main/preview/send.png)
+![send2](https://github.com/kristhinr/lc_flutter/tree/main/preview/send2.png)
 
