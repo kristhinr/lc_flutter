@@ -2,7 +2,7 @@
 
 尝试进行端对端加密，主要是对前端重构，加入了自己想要做的一些功能，并尝试统一风格。
 Flutter & Dart & LeanCloud
-Flutter的iOS风格聊天程序
+Flutter的iOS风格聊天程序，目前支持Android和iOS，web和Desktop并未测试。
 
 ## leancloud相关修改：
  - Global.dart文件：`/lib/Common/Global.dart`
