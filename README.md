@@ -79,7 +79,7 @@ Flutter的iOS风格聊天程序
 
 # Preview
 
-![login](/preview/pre1.png)
-![nav](preview/pre2.png)
-![send](/preview/pre3.png)
+![login](/preview/pre1.JPEG)
+![nav](preview/pre2.JPEG)
+![send](/preview/pre3.JPEG)
 
