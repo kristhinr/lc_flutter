@@ -79,7 +79,7 @@ Flutter的iOS风格聊天程序
 
 # Preview
 
-![login](https://github.com/kristhinr/lc_flutter/tree/main/preview/login.png)
+![login](/preview/login.png)
 
 ![nav](https://github.com/kristhinr/lc_flutter/tree/main/preview/nav.png)
 ![known](https://github.com/kristhinr/lc_flutter/tree/main/preview/known.png)
