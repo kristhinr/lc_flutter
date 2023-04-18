@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:encrypt/encrypt.dart' as encrypt;
 import '../Common/Global.dart';
 
-
+// 实现base+aes加密，包含在flutter主程序中的接口
 
 final key = encrypt.Key.fromUtf8('12345678901234561234567890123456');//可以用对话id?实现?//32位
 // IV
@@ -47,7 +47,7 @@ class funcEncrypt {
 
   String DecryptionMan(String string) {
     String decode = ''; //
-
+ 
     try {
       final decrypted = encryptor.decrypt64(string, iv: iv);
       decode = decrypted;

@@ -1,8 +1,5 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
-//import 'package:flutter/material.dart';
-//import 'package:flutter_plugin_record/flutter_plugin_record.dart';
 import '../Models/CurrentClient.dart';
 import '../Common/Global.dart';
 import '../Models/funcEncrypt.dart';
@@ -12,7 +9,8 @@ import 'package:leancloud_storage/leancloud.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 import 'package:scroll_to_index/scroll_to_index.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:flutter/cupertino.dart';
+
+// 消息内容页的信息，左右区别，从Conversation接收全部信息，可以从rawdata看到信息，
 
 class MessageList extends StatefulWidget {
   final Conversation conversation;
@@ -130,15 +128,7 @@ class _MessageListState extends State<MessageList> {
             curve: Curves.ease);
       });
     }
-    // if (message is AudioMessage) {
-    //   double height = 40.0 + 16 + 30;
-    //   setState(() {
-    //     _showMessageList.add(message);
-    //     _autoScrollController
-    //         .jumpTo(_autoScrollController.position.maxScrollExtent + height);
-    //   });
-    // }
-    //收到新消息以后再刷新列表
+
     mess.emit(MyEvent.ConversationRefresh);
   }
 
@@ -363,37 +353,9 @@ class _MessageListState extends State<MessageList> {
       return Text('暂未支持的消息类型。。。');
     }
   }
-  Future<bool> showlacklistDialog(String name) async {
-    return showCupertinoDialog<bool>(
-      context: context,
-      builder: (context) {
-        return CupertinoAlertDialog(
-          title: Text("加入黑名单"),
-          content: Text("确认拉黑 $name，不再接受来自 $name 的消息吗"),
-          actions: <Widget>[
-            CupertinoDialogAction(
-              child: Text("取消"),
-              onPressed: () => Navigator.of(context).pop(), // 关闭对话框
-            ),
-            CupertinoDialogAction(
-              child: Text("确认"),
-              onPressed: () {
-                //
 
-                //关闭对话框并返回true
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        );
-      },
-    );
-  }
   Future<bool> showReportDialog(String messageID,String text,String sender) async {
-    //print(messageID+ ' '+ text);
 
-
-    //String convid = this.widget.conversation.id;
     print(sender);
     return showCupertinoDialog<bool>(
 

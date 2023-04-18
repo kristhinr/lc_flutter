@@ -7,8 +7,6 @@ import '../Models/CurrentClient.dart';
 import '../Widgets/buildDecoretion.dart';
 import '../Widgets/buildUnReadCountView.dart';
 import '../Widgets/myBuildList.dart';
-import 'ConversationDetailPage.dart';
-import '../Widgets/TextWidget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../Common/Global.dart';
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
@@ -17,6 +15,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../routes/SelectChatMembers.dart';
 
+//列表页面，包含所有的（没有经过条件算法处理的）获取当前ID的conversation，
+// 时间倒序排列，if异步判断是否已经完成读取然后绘制到app中
 class ConversationListPage extends StatefulWidget {
   @override
   _ConversationListPageState createState() => new _ConversationListPageState();

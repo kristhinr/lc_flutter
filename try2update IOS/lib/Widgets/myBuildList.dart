@@ -9,6 +9,8 @@ import 'buildDecoretion.dart';
 import 'buildSepLine.dart';
 import 'buildUnReadCountView.dart';
 
+// 封装了页面绘制列表的函数，这样管理代码更方便
+
 bool value;
 bool isGroup;
 
@@ -92,15 +94,10 @@ Widget myBuildList(count,isGroup,value,context,index,snapshot,creater,name,unrea
         ));
   }else{return Container();}
 
-
-
 }
 
 
 Widget myStarList(context,index,name,text,time) {
-
-
-
     return Container(
         color: Color(0xffffffff),
         margin: EdgeInsets.all(0),
@@ -168,9 +165,6 @@ Widget myStarList(context,index,name,text,time) {
 
           ],
         ));
-
-
-
 
 }
 

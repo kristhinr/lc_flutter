@@ -1,12 +1,10 @@
-//import 'package:flutter/material.dart';
-import 'dart:convert';
-
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
 import 'package:leancloud_storage/leancloud.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter/cupertino.dart';
 
+//全局的几个Toast提醒框，和全局变量等内容
 enum MyEvent {
   NewMessage,
   ScrollviewDidScroll,

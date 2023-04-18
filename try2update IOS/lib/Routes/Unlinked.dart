@@ -1,4 +1,4 @@
-//import 'package:flutter/material.dart';
+
 import 'package:Mchat/Models/funcEncrypt.dart';
 import 'package:Mchat/Widgets/buildDecoretion.dart';
 import 'package:flutter/cupertino.dart';
@@ -17,6 +17,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../routes/SelectChatMembers.dart';
 import 'chatPer.dart';
+
+// 未知联系人，同已知联系人，但是过滤条件不同
 
 class Unlinked extends StatefulWidget {
   @override
@@ -176,15 +178,6 @@ class _UnlinkedState extends State<Unlinked> {
     //);
   }
 
-  void onTapEvent(Conversation con) {
-    Navigator.push(
-      context,
-      new CupertinoPageRoute(
-        builder: (context) => new ConversationDetailPage(conversation: con),
-      ),
-    );
-  }
-
   Future<List<Conversation>> retrieveData() async {
     CurrentClient currentClient = CurrentClient();
     List<Conversation> conversations;
@@ -208,18 +201,6 @@ class _UnlinkedState extends State<Unlinked> {
           unreadCountMap[item.id] = 0;
         }
 
-//        //之前没有值，存储一份
-//        if (prefs.getInt(item.id) == null) {
-//          if (item.unreadMessageCount != null) {
-//            prefs.setInt(item.id, item.unreadMessageCount);
-//            unreadCountMap[item.id] = item.unreadMessageCount;
-//          } else {
-//            prefs.setInt(item.id, 0);
-//            unreadCountMap[item.id] = 0;
-//          }
-//        } else {
-//          unreadCountMap[item.id] = prefs.getInt(item.id);
-//        }
       });
     } catch (e) {
       print(e);

@@ -1,10 +1,12 @@
-//import 'package:flutter/material.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Common/Global.dart';
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
 import '../Widgets/buildSepLine.dart';
 import 'ConversationDetailPage.dart';
+
+// 用于选择联系人（开启聊天，单聊或群聊），部署在导航-人员部分页面的右上角以及聊天-进入的charPer的联系人选择
 
 class SelectChatMembers extends StatefulWidget {
   @override

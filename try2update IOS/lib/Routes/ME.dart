@@ -5,6 +5,7 @@ import 'package:qr_flutter/qr_flutter.dart';
 import '../Common/Global.dart';
 // import '../model/DataTrans.dart';
 
+// 个人信息，包含名称，头像，一个包含信息的二维码，（目前没有意义）
 
 class ME extends StatefulWidget {
 @override

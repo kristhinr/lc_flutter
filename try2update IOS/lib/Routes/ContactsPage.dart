@@ -1,4 +1,4 @@
-//import 'package:flutter/material.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Common/Global.dart';
@@ -8,6 +8,8 @@ import 'package:leancloud_storage/leancloud.dart';
 import '../Widgets/buildSepLine.dart';
 import 'SelectChatMembers.dart';
 import 'ConversationDetailPage.dart';
+
+// 联系人页面，根据Global中的alluser list实现联系人，没有通过leancloud实现，基本算是展示页面
 
 class ContactsPage extends StatefulWidget {
   @override

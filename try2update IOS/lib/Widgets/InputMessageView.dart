@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'dart:typed_data';
-//import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import '../Common/Global.dart';
 import '../States/GlobalEvent.dart';
@@ -11,6 +10,7 @@ import 'package:leancloud_storage/leancloud.dart';
 import 'package:flutter/cupertino.dart';
 import '../Models/funcEncrypt.dart';
 
+// 输入消息的页面，
 class InputMessageView extends StatefulWidget {
   final Conversation conversation;
   InputMessageView({Key key, @required this.conversation}) : super(key: key);
@@ -23,10 +23,7 @@ class _InputMessageViewState extends State<InputMessageView> {
   final ImagePicker _imagePicker = ImagePicker();
 
   FocusNode myFocusNode;
-  //FlutterPluginRecord recordPlugin;
   bool _isShowImageGridView = false;
-  bool _isShowVoiceIcon = true;
-  IconData _voiceOrTextIcon;
   String message_encode;
   List _icons = [
     {'name': '照片', 'icon': CupertinoIcons.photo_on_rectangle},
@@ -50,25 +47,7 @@ class _InputMessageViewState extends State<InputMessageView> {
         //当有焦点的时候保持focus
       }
     });
-    //_voiceOrTextIcon = CupertinoIcons.mic;
-    //录音组件
-    //recordPlugin = new FlutterPluginRecord();
-    //recordPlugin.init();
-//
-//    /// 开始录制或结束录制的监听
-//    recordPlugin.response.listen((data) {
-//      if (data.msg == "onStop") {
-//        ///结束录制时会返回录制文件的地址方便上传服务器
-//        print("onStop " + data.path);
-//      } else if (data.msg == "onStart") {
-//        print("onStart --");
-//      }
-//    });
-
-//    mess.on(MyEvent.PlayAudioMessage, (path) {
-//      showToastGreen('消息正在播放');
-//      recordPlugin.playByPath(path,'url');
-//    });
+ 
   }
 
   @override
@@ -82,7 +61,6 @@ class _InputMessageViewState extends State<InputMessageView> {
     mess.off(
       MyEvent.PlayAudioMessage,
     );
-    //recordPlugin.dispose();
   }
 
   @override
@@ -163,9 +141,7 @@ class _InputMessageViewState extends State<InputMessageView> {
 
   Widget buildTextField() {
     return Container(
-
-
-
+      
       //alignment: Alignment.center,
       child: Row(
         children: <Widget>[
@@ -201,14 +177,14 @@ class _InputMessageViewState extends State<InputMessageView> {
 
             //                  color: Colors.grey,
           ),
-          Container(child: voiceOrTextView()),
+          Container(child: textView()),
 
         ],
       ),
     );
   }
 
-  Widget voiceOrTextView() {
+  Widget textView() {
 
       return Flexible(
         child: Container(
@@ -232,9 +208,7 @@ class _InputMessageViewState extends State<InputMessageView> {
         ),
       );
     }
-
-
-
+    
   // 点击加号
   void showImageGirdView() {
     // 监听焦点变化，获得焦点时focusNode.hasFocus 值为true，失去焦点时为false。
@@ -246,37 +220,7 @@ class _InputMessageViewState extends State<InputMessageView> {
       //      _isShowVoice = false;
     });
   }
-
-  //发消息
-//    void sendMessage(MyMessageType type) {
-//      switch (type.index) {
-//        case 0:
-//          //TextMessage 文本消息
-//
-//          break;
-//        case 1:
-//          //ImageMessage 图像消息
-//        sendImageMessage();
-//          break;
-//        case 2:
-//          //AudioMessage 音频消息
-//          break;
-//        case 3:
-//          //VideoMessage 视频消息
-//          break;
-//        case 4:
-//          //FileMessage 普通文件消息（.txt/.doc/.md 等各种）
-//          break;
-//        case 5:
-//          //LocationMessage 地理位置消息
-//          break;
-//        default:
-//          {
-//            showToastRed('消息类型错误！');
-//          }
-//          break;
-//      }
-//    }212
+  
   void sendTextMessage() async {
     //TODO: 此处是输入信息的设置
     if (_messController.text != null && _messController.text != '') {

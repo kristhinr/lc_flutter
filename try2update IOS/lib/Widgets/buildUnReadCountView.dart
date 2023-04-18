@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-
+// 未读消息的装饰
 Widget buildUnReadCountView(int count) {
   if (count > 0) {
     String showNum = '';

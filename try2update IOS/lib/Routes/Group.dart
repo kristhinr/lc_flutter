@@ -1,4 +1,4 @@
-//import 'package:flutter/material.dart';
+
 import 'package:Mchat/Widgets/buildDecoretion.dart';
 import 'package:flutter/cupertino.dart';
 import '../Models/CurrentClient.dart';
@@ -16,6 +16,9 @@ import 'package:flutter/cupertino.dart';
 
 import '../routes/SelectChatMembers.dart';
 
+//类似ConversationListPage的获取方式，但是进行了一个条件处理（conversation的人数>=3
+// 并且不同于其他的，包含一个特殊的装饰品（群聊人数）
+// 在已知/未知联系人/未读页面中的装饰品主要突出是否是已知来源发送的装饰（用一个不同颜色的小点）
 class Group extends StatefulWidget {
   @override
   _GroupState createState() => new _GroupState();
@@ -168,14 +171,6 @@ class _GroupState extends State<Group> {
     //);
   }
 
-  void onTapEvent(Conversation con) {
-    Navigator.push(
-      context,
-      new CupertinoPageRoute(
-        builder: (context) => new ConversationDetailPage(conversation: con),
-      ),
-    );
-  }
 
   Future<List<Conversation>> retrieveData() async {
     CurrentClient currentClient = CurrentClient();

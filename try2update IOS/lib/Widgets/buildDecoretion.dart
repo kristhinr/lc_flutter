@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../Common/Global.dart';
 
+//构造装饰品的几个选项，群聊使用的和其他类型时使用的不同装饰
 String memberCount;
 
 Widget buildDecoretion(String string) {

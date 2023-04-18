@@ -3,6 +3,8 @@ import 'package:leancloud_official_plugin/leancloud_plugin.dart';
 import '../Common/Global.dart';
 import 'funcEncrypt.dart';
 
+// 对Conversation信息进行简单处理
+
 class funcData {
   Conversation conversation;
 

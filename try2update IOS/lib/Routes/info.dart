@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import '../Common/Global.dart';
 
+// 是应用信息页面，静态页面，有一个应用的介绍，和一个支持作者装饰，弹窗感谢（示意）
 class info extends StatelessWidget {
 
 

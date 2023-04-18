@@ -1,8 +1,8 @@
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
+
 import '../Common/Global.dart';
 
+// 登录时，以及全局判断当前用户
 class CurrentClient {
   factory CurrentClient() => _sharedInstance();
   static CurrentClient _instance = CurrentClient._();

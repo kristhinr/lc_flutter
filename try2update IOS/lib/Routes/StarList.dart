@@ -18,6 +18,8 @@ import 'package:flutter/cupertino.dart';
 
 import '../routes/SelectChatMembers.dart';
 
+// 信息模块收藏功能，类似与Conversation的获取，但是包含内容覆盖不同，
+// 选择使用LCObject自己构成一个数据结构，异步从服务端获取信息并绘制
 class StarListPage extends StatefulWidget {
   @override
   _StarListPageState createState() => new _StarListPageState();
@@ -174,7 +176,6 @@ class _StarListPageState extends State<StarListPage> {
 
   Future<List<LCObject>> retrievestared() async {
     // my stared test!!!
-    CurrentClient currentClient = CurrentClient();
 
     List<LCObject> stared;
     try {

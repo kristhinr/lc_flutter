@@ -1,12 +1,13 @@
-//import 'package:flutter/material.dart';
+
 import 'package:Mchat/Routes/SelectChatMembers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
 import '../Models/CurrentClient.dart';
 import '../routes/ConversationDetailPage.dart';
-import 'UserProtocol.dart';
+
 import '../Common/Global.dart';
-import 'Navigation.dart';
+
+//实现一个单聊页面，直接输入id可以用于跟非联系人聊天，
 
 class chatPer extends StatefulWidget {
   @override

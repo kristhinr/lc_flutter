@@ -6,6 +6,8 @@ import '../Common/Global.dart';
 //import 'HomeBottomBar.dart';
 import 'Navigation.dart';
 
+// 登录页面，charPer页面基本是复刻这个页面，只增加了一个联系人多选页的跳转
+// 页面包含简单的登录（无验证），判断是否确认了用户协议，进行下一步
 class LoginPage extends StatefulWidget {
   @override
   _LoginPageState createState() => _LoginPageState();

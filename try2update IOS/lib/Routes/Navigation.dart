@@ -16,6 +16,11 @@ import 'Unread.dart';
 
 import 'Nav2.dart';
 
+
+// 主导航页面，登录界面之后进入的就是这个页面（包含三个部分）
+// 信息部分（收藏，所有信息，已知/未知联系人/未读信息）
+// 人员部分（联系人和群组）
+// 二级导航
 class Navigation extends StatelessWidget {
   // get data => TransferDataEntity;
 

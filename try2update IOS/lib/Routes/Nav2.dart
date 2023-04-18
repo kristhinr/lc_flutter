@@ -16,7 +16,8 @@ import 'info.dart';
 import 'ME.dart';
 
 // 充当设置页面,settings 应为其他选项卡
-
+// 二级导航页面，已经重绘
+// 包含个人简介，设置模块，关于
 class Nav2 extends StatefulWidget {
   @override
   _Nav2State createState() => _Nav2State();

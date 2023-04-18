@@ -19,6 +19,7 @@ import 'package:flutter/cupertino.dart';
 import '../routes/SelectChatMembers.dart';
 import 'chatPer.dart';
 
+// 已知联系人的页面，
 class Linked extends StatefulWidget {
   @override
   _LinkedState createState() => new _LinkedState();

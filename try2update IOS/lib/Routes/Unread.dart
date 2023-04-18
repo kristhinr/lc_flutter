@@ -1,6 +1,5 @@
 //import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import '../Models/CurrentClient.dart';
 import '../Models/funcData.dart';
 import '../Models/funcEncrypt.dart';
@@ -17,6 +16,9 @@ import 'package:flutter/cupertino.dart';
 
 import '../routes/SelectChatMembers.dart';
 import 'chatPer.dart';
+
+// 未读聊天，通过conversation发新消息后时间戳进行排列判断是否对某个用户是未读（服务器逻辑）
+// 本机程序只需要获取已有的数据结构包含的unread数据进行判断，包含一个未读标记装饰
 
 class Unread extends StatefulWidget {
   @override
@@ -175,17 +177,6 @@ class _UnreadState extends State<Unread> {
     //);
   }
 
-
-
-  void onTapEvent(Conversation con) {
-    Navigator.push(
-      context,
-      new CupertinoPageRoute(
-        builder: (context) => new ConversationDetailPage(conversation: con),
-      ),
-    );
-  }
-
   Future<List<Conversation>> retrieveData() async {
     CurrentClient currentClient = CurrentClient();
     List<Conversation> conversations;
@@ -209,18 +200,7 @@ class _UnreadState extends State<Unread> {
           unreadCountMap[item.id] = 0;
         }
 
-//        //之前没有值，存储一份
-//        if (prefs.getInt(item.id) == null) {
-//          if (item.unreadMessageCount != null) {
-//            prefs.setInt(item.id, item.unreadMessageCount);
-//            unreadCountMap[item.id] = item.unreadMessageCount;
-//          } else {
-//            prefs.setInt(item.id, 0);
-//            unreadCountMap[item.id] = 0;
-//          }
-//        } else {
-//          unreadCountMap[item.id] = prefs.getInt(item.id);
-//        }
+
       });
     } catch (e) {
       print(e);

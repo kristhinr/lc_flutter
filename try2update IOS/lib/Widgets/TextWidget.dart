@@ -1,6 +1,7 @@
-//import 'package:flutter/material.dart';
+
 import 'package:flutter/cupertino.dart';
 
+// unreadCount的一部分
 // 封装的文本组件Widget
 class TextWidget extends StatefulWidget {
   final Key key;

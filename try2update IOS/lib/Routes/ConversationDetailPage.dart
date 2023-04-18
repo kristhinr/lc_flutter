@@ -1,4 +1,3 @@
-//import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import '../Common/Global.dart';
 import '../Models/CurrentClient.dart';
@@ -6,6 +5,9 @@ import '../States/GlobalEvent.dart';
 import '../Widgets/MessageList.dart';
 import '../Widgets/InputMessageView.dart';
 import 'package:leancloud_official_plugin/leancloud_plugin.dart';
+
+//在列表页面中点进去的Conversation的详细信息页面，根据widget中inputmessageview和messagelist进行处理信息列表
+// 根据时间倒序排列，获取conversation后处理最后一条信息，发送时调用加密函数，
 
 class ConversationDetailPage extends StatefulWidget {
   final Conversation conversation;

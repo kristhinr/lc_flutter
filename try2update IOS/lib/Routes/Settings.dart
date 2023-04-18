@@ -10,13 +10,9 @@ class Settings extends StatefulWidget {
 }
 
 
+// 2级导航里面的设置页面，包含两个全局变量的switch修改，装饰品和选择是否显示解密后的文本（本地解密，实现端对端）
 
 class _SettingsState extends State<Settings> {
-  bool switchValueTest0 = false;
-  bool switchValueTest1 = true;
-  bool switchValueTest2 = true;
-  bool switchValueTest3 = false;
-  bool switchValueTest4 = false;
 
   @override
   Widget build(BuildContext context) {

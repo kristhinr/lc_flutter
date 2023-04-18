@@ -8,6 +8,7 @@ import 'package:path_provider/path_provider.dart';
 import 'ConversationListPage.dart';
 import 'Unread.dart';
 
+// 订阅页面，目前充当测试
 
 enum Sky { midnight, viridian, cerulean }
 
