@@ -88,14 +88,14 @@ class _InputMessageViewState extends State<InputMessageView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: 10,left: 0,right: 15),
+      margin: const EdgeInsets.only(top: 10, left: 0, right: 15),
       padding: EdgeInsets.only(left: 0),
       child: Column(children: <Widget>[
         Container(
-
           child: buildTextField(),
-          decoration: BoxDecoration(color: Color(0x00999900),
-            ),
+          decoration: BoxDecoration(
+            color: Color(0x00999900),
+          ),
         ),
         buildImageGridView()
       ]),
@@ -105,7 +105,9 @@ class _InputMessageViewState extends State<InputMessageView> {
   Widget buildImageGridView() {
     if (_isShowImageGridView) {
       return Container(
-        decoration: BoxDecoration(color: Color.fromRGBO(241, 243, 244, 0.9)),
+        decoration: BoxDecoration(
+          color: CupertinoColors.systemGroupedBackground,
+        ),
         child: GridView.builder(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 4,
@@ -146,7 +148,8 @@ class _InputMessageViewState extends State<InputMessageView> {
             height: 60.0,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-                color: Color(0xffffffff), borderRadius: BorderRadius.circular(10.0)),
+                color: Color(0xffffffff),
+                borderRadius: BorderRadius.circular(10.0)),
             child: Icon(
               icon,
               size: 28.0,
@@ -163,9 +166,6 @@ class _InputMessageViewState extends State<InputMessageView> {
 
   Widget buildTextField() {
     return Container(
-
-
-
       //alignment: Alignment.center,
       child: Row(
         children: <Widget>[
@@ -175,65 +175,54 @@ class _InputMessageViewState extends State<InputMessageView> {
               width: 45,
               height: 32,
               child: Container(
-                margin:EdgeInsets.only(left: 0),
-
-
+                margin: EdgeInsets.only(left: 0),
                 decoration: new BoxDecoration(
                   color: Color(0xff057efe).withOpacity(0.8),
-
-
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
-                    Icon(CupertinoIcons.add,size: 22.0,color: Color(0xffffffff),)
-
-                  ],),
-
-
-
-              ),),
-
-
+                    Icon(
+                      CupertinoIcons.add,
+                      size: 22.0,
+                      color: Color(0xffffffff),
+                    )
+                  ],
+                ),
+              ),
+            ),
 
             //                  color: Colors.grey,
           ),
           Container(child: voiceOrTextView()),
-
         ],
       ),
     );
   }
 
   Widget voiceOrTextView() {
-
-      return Flexible(
-        child: Container(
-          height: 34,
-          margin: const EdgeInsets.only(top: 2, bottom: 2),
-          child: CupertinoTextField(
-    decoration: BoxDecoration(
-    // 文本框装饰
-    color: Color(0xffffffff), // 文本框颜色
-    border: Border.all(
-    color: Color(0xffe5e5e5), width: 1), // 输入框边框
-    borderRadius:
-    BorderRadius.all(Radius.circular(25)),),
-            textInputAction: TextInputAction.send,
-            controller: _messController,
-            focusNode: myFocusNode,
-            onEditingComplete: () {
-              sendTextMessage();
-            },
+    return Flexible(
+      child: Container(
+        height: 34,
+        margin: const EdgeInsets.only(top: 2, bottom: 2),
+        child: CupertinoTextField(
+          decoration: BoxDecoration(
+            // 文本框装饰
+            color: Color(0xffffffff), // 文本框颜色
+            border: Border.all(color: Color(0xffe5e5e5), width: 1), // 输入框边框
+            borderRadius: BorderRadius.all(Radius.circular(25)),
           ),
+          textInputAction: TextInputAction.send,
+          controller: _messController,
+          focusNode: myFocusNode,
+          onEditingComplete: () {
+            sendTextMessage();
+          },
         ),
-      );
-    }
-
-
+      ),
+    );
+  }
 
   // 点击加号
   void showImageGirdView() {
@@ -282,11 +271,11 @@ class _InputMessageViewState extends State<InputMessageView> {
     if (_messController.text != null && _messController.text != '') {
       try {
         TextMessage textMessage = TextMessage();
-        print(this.widget.conversation.id);//24bit,可以在输入前获取，这是个固定值，
+        print(this.widget.conversation.id); //24bit,可以在输入前获取，这是个固定值，
         message_encode = funcEncrypt().Encryption(_messController.text);
         //TODO : 编写时，funct()加括号，获取Encryption为静态变量
 
-        textMessage.text =  message_encode;
+        textMessage.text = message_encode;
         //print(">>> Global.encryptionValue:"+Global.encryptionValue.toString());
 
         //textMessage.text = _messController.text;
@@ -360,6 +349,4 @@ class _InputMessageViewState extends State<InputMessageView> {
       print(e.toString());
     }
   }
-
-
 }
