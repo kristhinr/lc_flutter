@@ -79,19 +79,7 @@ Flutter的iOS风格聊天程序
 
 # Preview
 
-![login](/preview/login.png)
-
-![nav](preview/nav.png)
-![known](/preview/known.png)
-![star](/preview/star.png)
-![star_decode](/preview/star_decode.png)
-![group](/preview/group.png)
-![message_decode](/preview/message_decode.png)
-![message_encode](/preview/message_encode.png)
-
-![nav2](/preview/nav2.png)
-![func](/preview/func.png)
-
-![send](/preview/send.png)
-![send2](/preview/send2.png)
+![login](/preview/pre1.png)
+![nav](preview/pre2.png)
+![send](/preview/pre3.png)
 
