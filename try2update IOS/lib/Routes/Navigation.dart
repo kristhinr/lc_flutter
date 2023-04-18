@@ -55,7 +55,7 @@ class Navigation extends StatelessWidget {
                                     '已收藏  ',
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.black,
+                                      
                                       //fontWeight: FontWeight.w600
                                     ),
                                   ),
@@ -87,7 +87,7 @@ class Navigation extends StatelessWidget {
                                 '所有信息  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -113,7 +113,7 @@ class Navigation extends StatelessWidget {
                                 '已知联系人  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -139,7 +139,7 @@ class Navigation extends StatelessWidget {
                                 '未知联系人  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -165,7 +165,7 @@ class Navigation extends StatelessWidget {
                                 '未处理  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -197,7 +197,7 @@ class Navigation extends StatelessWidget {
                                 '联系人  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -224,7 +224,7 @@ class Navigation extends StatelessWidget {
                                 '群组  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -258,7 +258,7 @@ class Navigation extends StatelessWidget {
                                 '设置  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+                                  
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),

@@ -137,7 +137,7 @@ height: 100,
                                     style: TextStyle(
                                         fontSize: 32.0,
                                         letterSpacing: 0,
-                                        color: Colors.black,
+
                                         fontWeight: FontWeight.w600),
                                   ),
                                   SizedBox(height: 4),
@@ -162,7 +162,7 @@ height: 100,
                                 '个人资料  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -199,7 +199,7 @@ height: 100,
                                     '订阅  ',
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.black,
+
                                       //fontWeight: FontWeight.w600
                                     ),
                                   ),
@@ -230,7 +230,7 @@ height: 100,
                                 '选项  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -256,7 +256,7 @@ height: 100,
                                 '加密保护  ',
                                 style: TextStyle(
                                   fontSize: 16.0,
-                                  color: Colors.black,
+
                                   //fontWeight: FontWeight.w600
                                 ),
                               ),
@@ -303,7 +303,7 @@ height: 100,
                                     '关于程序  ',
                                     style: TextStyle(
                                       fontSize: 16.0,
-                                      color: Colors.black,
+
                                       //fontWeight: FontWeight.w600
                                     ),
                                   ),
