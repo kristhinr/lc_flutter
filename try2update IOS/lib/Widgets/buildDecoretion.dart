@@ -109,9 +109,7 @@ Widget buildKnown(bool isGroup,bool bool, String string, count) {
               )));}
     else{//unknown
       return DecoratedBox(
-      //unknow
       decoration: BoxDecoration(
-
         gradient:
         LinearGradient(colors: [Color(0xc0f44336), Color(0xc0f44336)]),
         //渐变效果

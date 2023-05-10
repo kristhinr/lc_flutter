@@ -84,9 +84,10 @@ class _ConversationListPageState extends State<ConversationListPage> {
 //根据ID获取index
   @override
   void dispose() {
-    super.dispose();
+
     //取消订阅
     mess.off(MyEvent.ConversationRefresh);
+    super.dispose();
   }
 
   @override
@@ -115,7 +116,6 @@ class _ConversationListPageState extends State<ConversationListPage> {
                   );
                 }),
           ),
-          //SizedBox(height: 10,),
           SliverToBoxAdapter(
             child: Container(
               height: 10.0, // desired empty space height

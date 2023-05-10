@@ -314,20 +314,13 @@ class _MessageListState extends State<MessageList> {
                         Radius.circular(12.0),
                       ),
                     ),
-              child: new Text(
-                //TODO：显示端 —— 设置解密？ dd
+              child: Text(
                   funcEncrypt().Decryption(getMessageString(message),),
-
-
-                  //getMessageString(message),
-               // getMessageString(message).replaceAll('?encoded', '!decoded'),
                 //最后显示
-                style: new TextStyle(
+                style: TextStyle(
                     fontWeight: FontWeight.normal,
                     color: _isMessagePositionLeft ? Color(0xff000000) : Color(0xffffffff)),
-                //###########
-                // 修改的位置，颜色标记。 文字颜色：白/蓝
-                //##########3
+
               )));
     } else if (message is FileMessage) {
       if (message is ImageMessage) {
@@ -422,12 +415,13 @@ await stared.save();
 
   @override
   void dispose() {
-    super.dispose();
+
     //recordPlugin.dispose();
     //取消订阅
     mess.off(MyEvent.NewMessage);
     mess.off(MyEvent.ImageMessageHeight);
 //    mess.off(MyEvent.EditingMessage);
+    super.dispose();
   }
 
   @override

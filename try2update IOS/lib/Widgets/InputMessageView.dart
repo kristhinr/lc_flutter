@@ -53,7 +53,7 @@ class _InputMessageViewState extends State<InputMessageView> {
   @override
   void dispose() {
     myFocusNode.dispose();
-    super.dispose();
+
     //取消订阅
     mess.off(
       MyEvent.ScrollviewDidScroll,
@@ -61,6 +61,7 @@ class _InputMessageViewState extends State<InputMessageView> {
     mess.off(
       MyEvent.PlayAudioMessage,
     );
+    super.dispose();
   }
 
   @override
@@ -152,33 +153,19 @@ class _InputMessageViewState extends State<InputMessageView> {
               height: 32,
               child: Container(
                 margin:EdgeInsets.only(left: 0),
-
-
                 decoration: new BoxDecoration(
                   color: Color(0xff057efe).withOpacity(0.8),
-
-
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
-
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     Icon(CupertinoIcons.add,size: 22.0,color: Color(0xffffffff),)
-
                   ],),
-
-
-
               ),),
-
-
-
-            //                  color: Colors.grey,
+//                  color: Colors.grey,
           ),
           Container(child: textView()),
-
         ],
       ),
     );
@@ -229,13 +216,8 @@ class _InputMessageViewState extends State<InputMessageView> {
         print(this.widget.conversation.id);//24bit,可以在输入前获取，这是个固定值，
         message_encode = funcEncrypt().Encryption(_messController.text);
         //TODO : 编写时，funct()加括号，获取Encryption为静态变量
-
         textMessage.text =  message_encode;
-        //print(">>> Global.encryptionValue:"+Global.encryptionValue.toString());
 
-        //textMessage.text = _messController.text;
-        //可以对 _messController.text （读取的文本信息进行加密后发送，）
-        // 此处获取从聊天框输入的文本类信息；获取
         await this.widget.conversation.send(message: textMessage);
 
 //        showToastGreen('发送成功');

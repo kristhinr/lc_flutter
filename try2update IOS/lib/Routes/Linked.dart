@@ -87,9 +87,10 @@ class _LinkedState extends State<Linked> {
 //根据ID获取index
   @override
   void dispose() {
-    super.dispose();
+
     //取消订阅
     mess.off(MyEvent.ConversationRefresh);
+    super.dispose();
   }
 
   @override

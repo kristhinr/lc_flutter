@@ -5,7 +5,7 @@ import '../Common/Global.dart';
 
 // 实现base+aes加密，包含在flutter主程序中的接口
 
-final key = encrypt.Key.fromUtf8('12345678901234561234567890123456');//可以用对话id?实现?//32位
+final key = encrypt.Key.fromUtf8('12345678901234561234567890123456');//可以用对话id?实现?//32位（AES128）
 // IV
 final iv = encrypt.IV.fromUtf8('1234567890123456');//16位向量
 
@@ -16,13 +16,9 @@ class funcEncrypt {
   String Encryption(String string) {
     if (Global.encryptionValue == true) {
       string = base64.encode(utf8.encode(string)); //前置base64封包
-      //TODO:
-
       final encrypted = encryptor.encrypt(string, iv: iv);
       string = encrypted.base64;
-      //encode = string;
     }
-
     return string;
   }
 
@@ -46,7 +42,7 @@ class funcEncrypt {
   }
 
   String DecryptionMan(String string) {
-    String decode = ''; //
+    String decode = '';
  
     try {
       final decrypted = encryptor.decrypt64(string, iv: iv);

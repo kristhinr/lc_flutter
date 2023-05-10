@@ -84,9 +84,10 @@ class _GroupState extends State<Group> {
 //根据ID获取index
   @override
   void dispose() {
-    super.dispose();
+
     //取消订阅
     mess.off(MyEvent.ConversationRefresh);
+    super.dispose();
   }
 
   @override

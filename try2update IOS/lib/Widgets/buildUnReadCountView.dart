@@ -9,9 +9,7 @@ Widget buildUnReadCountView(int count) {
     }
 
     return DecoratedBox(
-
         decoration: BoxDecoration(
-
           gradient:
           LinearGradient(colors: [Color(0xfff44336), Color(0xfff44336)]),
           borderRadius: BorderRadius.circular(16.0), //圆角
@@ -19,7 +17,6 @@ Widget buildUnReadCountView(int count) {
         child: Padding(
 
             padding: EdgeInsets.symmetric(horizontal: 4.0, vertical: 3.0),
-//              child: TextWidget(_keyList[index])));
             child: Text(
               showNum,
               style: TextStyle(

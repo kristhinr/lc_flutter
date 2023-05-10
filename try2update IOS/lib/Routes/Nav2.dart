@@ -189,39 +189,39 @@ height: 100,
 
                     CupertinoListSection.insetGrouped(
                       children: [
-                        Container(
-                          height: 43,
-                          child: CupertinoListTile.notched(
-                            title: Container(
-                              padding: EdgeInsets.only(top: 11),
-                              child: Row(
-                                children: [
-                                  Text(
-                                    '订阅  ',
-                                    style: TextStyle(
-                                      fontSize: 16.0,
-
-                                      //fontWeight: FontWeight.w600
-                                    ),
-                                  ),
-                                  buildBETA(),
-                                ],
-                              ),
-                            ),
-                            leading: Icon(
-                              CupertinoIcons.briefcase,
-
-                            ),
-                            trailing: const CupertinoListTileChevron(),
-                            onTap: () {
-                              Navigator.push(context,
-                                  CupertinoPageRoute<Widget>(
-                                      builder: (BuildContext context) {
-                                        return  Subscription();
-                                      }));
-                            },
-                          ),
-                        ),
+                        // Container(
+                        //   height: 43,
+                        //   child: CupertinoListTile.notched(
+                        //     title: Container(
+                        //       padding: EdgeInsets.only(top: 11),
+                        //       child: Row(
+                        //         children: [
+                        //           Text(
+                        //             '订阅  ',
+                        //             style: TextStyle(
+                        //               fontSize: 16.0,
+                        //
+                        //               //fontWeight: FontWeight.w600
+                        //             ),
+                        //           ),
+                        //           buildBETA(),
+                        //         ],
+                        //       ),
+                        //     ),
+                        //     leading: Icon(
+                        //       CupertinoIcons.briefcase,
+                        //
+                        //     ),
+                        //     trailing: const CupertinoListTileChevron(),
+                        //     onTap: () {
+                        //       Navigator.push(context,
+                        //           CupertinoPageRoute<Widget>(
+                        //               builder: (BuildContext context) {
+                        //                 return  Subscription();
+                        //               }));
+                        //     },
+                        //   ),
+                        // ),
                         Container(
                           height: 43,
                           child: CupertinoListTile.notched(
